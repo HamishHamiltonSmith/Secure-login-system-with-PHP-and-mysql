@@ -4,7 +4,7 @@ $username = $_GET["username"];
 $plain_pass = $_GET["password"];
 $hash_pass = md5($plain_pass);
 $email = $_GET["email"];
-$conn = new mysqli("localhost", "hamakins", "password123", "Users");
+$conn = new mysqli("localhost", "username", "password", "database");
 if ($conn->connect_error) {
   die("Falied to conect to database: ". $conn->connect_error);
 }
