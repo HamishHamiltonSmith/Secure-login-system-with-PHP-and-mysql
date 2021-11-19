@@ -10,7 +10,7 @@ $plain_pass = $_GET["password"];
 $hash_pass = md5($plain_pass);
 $email = $_GET["email"];
 
-$add = $conn->prepare("INSERT INTO table (username, email, password) VALUES (?, ?, ?)");
+$add = $conn->prepare("INSERT INTO Site_Users (username, email, password) VALUES (?, ?, ?)");
 $add->bind_param("sss", $username, $email, $hash_pass);
 
 
